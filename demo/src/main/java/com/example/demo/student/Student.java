@@ -13,7 +13,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import java.time.LocalDate;
+import java.time.Period;
 
 @Getter
 @Setter
@@ -36,10 +38,14 @@ public class Student {
     private Long id;
     @NonNull
     private String name;
-    @NonNull
+    @Transient
     private Integer age;
     @NonNull
     private LocalDate dob;
     @NonNull
     private String email;
+
+    public Integer getAge() {
+        return Period.between(dob, LocalDate.now()).getYears();
+    }
 }
