@@ -1,15 +1,18 @@
 package com.example.demo.student;
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class StudentService {
+
+    private final StudentRepository studentRepository;
+
     public List<Student> getStudents() {
-        return List.of(
-                new Student(1L, "Philip Vella", 31, LocalDate.of(1990, 4, 21), "test@philip.com")
-        );
+        return studentRepository.findAll();
     }
 }
