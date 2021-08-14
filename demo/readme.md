@@ -1,11 +1,13 @@
 # Amigos FREE Spring 1h30m course
 
+Follow your instructor Nelson, as he will teach you how to write an N Tier enterprise application backed by a Postgres Database. You will also learn important concepts such as Restful API's, Dependency Injection, parsing JSON objects, POST, GET, PUT, and DELETE HTTP Requests and more.
 
 
-###Link to course
+
+### Link to course
 https://amigoscode.com/courses/267273
 
-###Where I last left off
+### Where I last left off
 https://amigoscode.com/courses/267273/lectures/29454615
 
 ###Important Links
